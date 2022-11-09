@@ -14,6 +14,8 @@ export class ToDoServiceService {
     // }
   ] 
 
+  taskCompleted: ToDo[] = []
+  //? PER QUESTA LISTA DI TASK COMPLETATE SAREBBE STATO MEGLIO UN'ALTRO SERVICE?
  
 
   constructor() { }
@@ -30,17 +32,16 @@ export class ToDoServiceService {
 
   completeTask(task: ToDo){
     task.completed = true;
-    console.log(task)
+    this.taskCompleted.push(task)
+    // console.log(this.taskCompleted) 
+
+    //?COME SVUOTARE IL VALUE DELL'INPUT ONSUBMIT??
+  }
+
+  deleteTask(task: ToDo){
+    // console.log(task)
+    this.todoList.splice( this.todoList.indexOf(task), 1) /* ELIMINA GLOBALMENTE LA TASK DAL SERVICE */
     
-    
   }
-
-  getToDo(){
-
-  }
-
-  putToDO(){
-
-  }
-  
+ 
 }

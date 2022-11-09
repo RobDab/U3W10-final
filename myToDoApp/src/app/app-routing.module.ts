@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path:'todo-completed',
     component: ToDoCompletedPage
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'todo-list'
   }
 ];
 

@@ -9,8 +9,10 @@ import { ToDoServiceService } from '../to-do-service.service';
 export class ToDoListPage implements OnInit {
 
   todoList: ToDo[] = []
+  
   constructor(private todolistservice: ToDoServiceService) {
     this.todoList = this.todolistservice.todoList
+    
    }
 
   ngOnInit(): void {
@@ -18,10 +20,15 @@ export class ToDoListPage implements OnInit {
 
   addToDo(task: string){
     this.todolistservice.addToDo(task)
+    
   }
   
   completeTask(task: ToDo){
     this.todolistservice.completeTask(task)
+  }
+
+  deleteTask(task: ToDo){
+    this.todolistservice.deleteTask(task)
   }
 
 }

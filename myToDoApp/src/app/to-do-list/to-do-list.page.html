@@ -19,7 +19,7 @@
       <p>{{task.task}}</p>
       <div>
         <button type="button" (click)="completeTask(task)">done</button>
-        <button type="button">X</button>
+        <button type="button" (click)="deleteTask(task)">X</button>
       </div>
     </li>
   </ul>

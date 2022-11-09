@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div>
+  <p>choose page:</p>
+  <button
+    type="button"
+    [routerLink]="['/todo-list']"
+    routerLinkActive="router-link-active"
+  >
+    All ToDos
+  </button>
+  <button
+    type="button"
+    [routerLink]="['/todo-completed']"
+    routerLinkActive="router-link-active"
+  >
+    Completed ToDos
+  </button>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

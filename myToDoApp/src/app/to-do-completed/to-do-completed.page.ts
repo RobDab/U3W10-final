@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToDo } from '../classes/to-do';
+import { ToDoServiceService } from '../to-do-service.service';
 
 @Component({
   templateUrl: './to-do-completed.page.html',
@@ -6,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoCompletedPage implements OnInit {
 
-  constructor() { }
+  tasksCompleted: ToDo[] = []
+  constructor(private todolistService : ToDoServiceService) {
+    this.tasksCompleted = this.todolistService.taskCompleted
+   }
 
   ngOnInit(): void {
   }

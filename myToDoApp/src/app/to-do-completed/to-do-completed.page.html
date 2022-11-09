@@ -1,1 +1,8 @@
-<p>to-do-completed works!</p>
+<h2>Completed Tasks</h2>
+<div>
+  <ul>
+    <li *ngFor="let task of tasksCompleted">
+      <p>{{task.task}}</p>
+    </li>
+  </ul>
+</div>
