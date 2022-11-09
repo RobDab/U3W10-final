@@ -1,0 +1,26 @@
+<h2>ToDo List</h2>
+<div id="addtask">
+  <label for="taskInput">Add task</label>
+  <div>
+    <input
+      type="text"
+      name="taskInput"
+      placeholder="your new task here..."
+      required
+      #taskInput
+    />
+    <button type="button" (click)="addToDo(taskInput.value)">+</button>
+  </div>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let task of todoList">
+      {{task.id}} -
+      <p>{{task.task}}</p>
+      <div>
+        <button type="button" (click)="completeTask(task)">done</button>
+        <button type="button">X</button>
+      </div>
+    </li>
+  </ul>
+</div>

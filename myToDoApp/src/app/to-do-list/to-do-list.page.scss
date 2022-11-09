@@ -1,0 +1,50 @@
+
+
+#addtask {
+    div {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        
+
+        button {
+            margin-block: 1em;
+            width: 100px;
+            border: 0 solid;
+            background-color: green;
+            color: white;
+            font-size: larger;
+            
+        }
+    }
+    
+    
+
+
+}
+
+ul {
+    width: 50%;
+    border: 0 solid;
+    border-radius: 10px;
+    background-color: lightgrey;
+
+    li {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            margin-right:  20px;
+        }
+        
+        p,div{
+            display:inline-block;
+        }
+
+        
+    
+    }
+}
